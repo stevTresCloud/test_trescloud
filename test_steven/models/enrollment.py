@@ -6,7 +6,14 @@ from odoo.exceptions import UserError, RedirectWarning, ValidationError
 
 class Enrollment(models.Model):
     _name = 'enrollment'
+    _inherit = ['portal.mixin', 'mail.thread', 'mail.activity.mixin', 'utm.mixin']
     _description = 'Enrollment of the student.'
+    
+    def action_matriculate_button(self):
+        self.state = 'matriculate'
+    
+    def action_cancel(self):
+        pass
     
     @api.model
     def create(self, vals):
@@ -24,10 +31,9 @@ class Enrollment(models.Model):
         default='New'
         )
     state = fields.Selection(
-        [('draft', 'New'),
-        ('approved', 'Approved'),
-        ('matriculate', 'Matriculate')],
-        required=True,
+        [('draft', 'Draft'),
+        ('matriculate', 'Matriculate'),
+        ('cancel', 'Cancel')],
         default='draft'
         )
     student_partner_id = fields.Many2one(
@@ -35,36 +41,45 @@ class Enrollment(models.Model):
         string='Student',
         help='Student of this enrollment.',
         required=True,
-        states={'draft': [('readonly', False)]}
+        states={'draft': [('readonly', False)], 'matriculate': [('readonly', True)],'cancel': [('readonly', True)]}
         )
     day_trip = fields.Selection(
         [('morning', 'Morning'),
         ('evening', 'Evening')],
         help='Day trip in which the student will study.',
-        required=True,
-        default='morning'
+        default='morning',
+        states={'draft': [('readonly', False)], 'matriculate': [('readonly', True)],'cancel': [('readonly', True)]}
         )
     start_date = fields.Date(
         string='Start Date',
         help='Starting day the career begins.',
-        required=True,
-        default=fields.Date.context_today
+        default=fields.Date.context_today,
+        states={'draft': [('readonly', False)], 'matriculate': [('readonly', True)],'cancel': [('readonly', True)]}
         )
     end_date = fields.Date(
         string='End Date',
         help='Ending day the career finish.',
-        required=True
+        states={'draft': [('readonly', False)], 'matriculate': [('readonly', True)],'cancel': [('readonly', True)]}
         )
-    course_level = fields.Selection(
-        [('first', 'Course A'),
-        ('second', 'Course B'),
-        ('third', 'Course C')],
-        required=True
+    course_code = fields.Char(
+        string='Course Code',
+        help='Course Code for the enrollment in the partner student.',
+        required=True,
+        readonly=True,
+        store=True,
+        states={'draft': [('readonly', False)], 'matriculate': [('readonly', True)],'cancel': [('readonly', True)]}
         )
     career_enrollment_id = fields.Many2one(
         'career.enrollment',
         string='Career',
         help='Career that the student will follow.',
         required=True,
-        states={'draft': [('readonly', False)]}
+        states={'draft': [('readonly', False)], 'matriculate': [('readonly', True)],'cancel': [('readonly', True)]}
+        )
+    sale_order_id = fields.Many2one(
+        'sale.order',
+        string='Transaction',
+        help='Reference transaction where enrollment was created.',
+        required=True,
+        states={'draft': [('readonly', False)], 'matriculate': [('readonly', True)],'cancel': [('readonly', True)]}
         )

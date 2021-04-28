@@ -20,10 +20,9 @@
 						<group>
 							<group string="Details">
 								<field name="teacher_employee_id" />
-								<field name="total_hours" />
 							</group>
-							<group string="Scores">
-								<field name="career_id" />
+							<group string="Hours">
+								<field name="total_hours" />
 							</group>
 						</group>
 						<field name="subject_syllabus_ids" widget="one2many_list" nolabel="1" class="oe_inline oe_no_button">
@@ -34,6 +33,11 @@
 							</tree>
 						</field>
 					</sheet>
+					<div class="oe_chatter">
+	                    <field name="message_follower_ids"/>
+	                    <field name="activity_ids"/>
+	                    <field name="message_ids"/>
+	                </div>
 				</form>
 			</field>
 		</record>
@@ -81,7 +85,7 @@
 			parent="sale.sale_menu_root" sequence="7" />
 
 		<menuitem id="menu_sales_subject" name="Subject"
-			parent="menu_sales_enrollment_categ" sequence="1"
+			parent="menu_sales_enrollment_categ" sequence="2"
 			action="action_subject_view" />
 	</data>
 </odoo>

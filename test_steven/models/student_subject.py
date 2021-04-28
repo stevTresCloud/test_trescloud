@@ -6,7 +6,8 @@ from odoo.exceptions import UserError, RedirectWarning, ValidationError
 
 class StudentSubject(models.Model):
     _name = 'student.subject'
-    _description = 'Student Subject'
+    _inherit = ['portal.mixin', 'mail.thread', 'mail.activity.mixin', 'utm.mixin']
+    _description = 'Student Subjects'
     
     # Columns
     name = fields.Many2one(
@@ -46,6 +47,13 @@ class StudentSubject(models.Model):
         required=True,
         readonly=True,
         store=True,
+        )
+    total_hours = fields.Integer(
+        related="name.total_hours",
+        string=u'Total Hours',
+        help=u'Total of hours of the subject.',
+        readonly=True,
+        store=True
         )
     student_id = fields.Many2one(
         'res.partner',

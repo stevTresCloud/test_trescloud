@@ -37,7 +37,11 @@
         # 'views/templates.xml',
         'views/subject_view.xml',
         'views/res_partner_view.xml',
-        'views/enrollment_view.xml'
+        'views/enrollment_view.xml',
+        'views/product_template_view.xml',
+        'views/sale_order_view.xml',
+        'views/career_enrollment_view.xml',
+        'views/student_subject_view.xml'
         
         # Security
         # 'security/ir.model.access.csv',
