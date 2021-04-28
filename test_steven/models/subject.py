@@ -8,9 +8,20 @@ class Subject(models.Model):
     _name = 'subject'
     _description = 'Career Subject'
     
+    @api.onchange('subject_syllabus_ids')
+    def _onchange_subject_syllabus_ids(self):
+        self._compute_total_subject_hours()
+        
+    @api.depends('total_hours')
+    def _compute_total_subject_hours(self):
+        total = 0
+        if self.subject_syllabus_ids:
+            total = sum(syllabus.syllabus_hours for syllabus in self.subject_syllabus_ids)
+        self.total_hours = total
+    
     # Columns
     name = fields.Char(
-        string=u'Name subject',
+        string=u'Subject',
         help=u'Name of the subject.',
         required=True
         )
@@ -27,44 +38,27 @@ class Subject(models.Model):
     max_score = fields.Float(
         string="Max Score",
         help='Max Score of the subject',
-        readonly=True
+        readonly=True,
+        store=True
         )
-    min_score = fields.Float(
-        string="Min Score",
-        help='Min Score of the subject',
-        readonly=True
+    total_hours = fields.Integer(
+        string=u'Total Hours',
+        compute='_compute_total_subject_hours',
+        help=u'Total of hours of the subject.',
+        readonly=True,
+        store=True
         )
-    average = fields.Float(
-        string="Average",
-        help='Average of the three levels.',
-        readonly=True
-        )
-    is_approved = fields.Selection(
-        [('approved', 'Approved'),
-        ('disapproved', 'Disapproved')],
-        store=True,
-        required=True,
-        readonly=True
-        )
-    level_id = fields.Many2one(
-        'career.enrollment.levels',
-        string='Level Id',
-        help='Reference to the level.',
+    career_id = fields.Many2one(
+        'career.enrollment',
+        string='Career',
+        help='Reference to the career.',
         required=True
         )
     subject_syllabus_ids = fields.One2many(
         'subject.syllabus',
         'subject_id',
         string='Subjects Syllabus',
-        help='Subjects syllabus',
-        readonly=True
-        )
-    subject_scores_ids = fields.One2many(
-        'subject.scores',
-        'subject_id',
-        string='Subjects Syllabus',
-        help='Subjects syllabus',
-        readonly=True
+        help='Subjects syllabus'
         )
 
     
@@ -86,28 +80,6 @@ class SubjectSyllabus(models.Model):
         string=u'Hours',
         help=u'Number of hours of the syllabus.',
         required=True 
-        )
-    subject_id = fields.Many2one(
-        'subject',
-        string='Subject',
-        help='Reference of the subject.',
-        required=True
-        )
-
-
-class SubjectScores(models.Model):
-    _name = 'subject.scores'
-    _description = 'Subject scores'
-    
-    # Columns
-    name = fields.Char(
-        string=u'Name Score',
-        help=u'Name of the score.',
-        required=True
-        )
-    score = fields.Float(
-        string="Score",
-        help='Score of the subject'
         )
     subject_id = fields.Many2one(
         'subject',

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="view_subject_form" model="ir.ui.view">
+			<field name="name">view.subject.form</field>
+			<field name="model">subject</field>
+			<field name="arch" type="xml">
+				<form string="Subject">
+					<sheet>
+						<div class="oe_title">
+							<label for="name" />
+							<h1>
+								<field name="name" placeholder="Subject" />
+							</h1>
+						</div>
+						<div>
+							<field name="description"
+								placeholder="Insert description of the subject" />
+						</div>
+						<group>
+							<group string="Details">
+								<field name="teacher_employee_id" />
+								<field name="total_hours" />
+							</group>
+							<group string="Scores">
+								<field name="career_id" />
+							</group>
+						</group>
+						<field name="subject_syllabus_ids" widget="one2many_list" nolabel="1" class="oe_inline oe_no_button">
+							<tree editable="top">
+								<field name="name" />
+								<field name="description" />
+								<field name="syllabus_hours" />
+							</tree>
+						</field>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<record id="view_subject_tree" model="ir.ui.view">
+			<field name="name">view.subject.tree</field>
+			<field name="model">subject</field>
+			<field name="arch" type="xml">
+				<tree string="Subjects">
+					<field name="name" />
+					<field name="teacher_employee_id" />
+					<field name="total_hours" />
+				</tree>
+			</field>
+		</record>
+
+		<record id="action_subject_view" model="ir.actions.act_window">
+			<field name="name">Subjects</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">subject</field>
+			<!-- <field name="view_type">form</field> -->
+			<field name="view_mode">tree,form</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">
+					Subjects
+				</p>
+				<p>
+					There is no examples click here to add new Subjects.
+				</p>
+			</field>
+		</record>
+
+		<menuitem id="menu_enrollment_root" name="Enrollment"
+			sequence="10" />
+
+		<menuitem id="menu_enrollment_categ" name="Maintenance"
+			parent="menu_enrollment_root" sequence="0" />
+
+		<menuitem id="menu_subject" name="Subject"
+			parent="menu_enrollment_categ" sequence="2"
+			action="action_subject_view" />
+
+		<!-- Sales Menú -->
+		<menuitem id="menu_sales_enrollment_categ" name="Enrollments menú"
+			parent="sale.sale_menu_root" sequence="7" />
+
+		<menuitem id="menu_sales_subject" name="Subject"
+			parent="menu_sales_enrollment_categ" sequence="1"
+			action="action_subject_view" />
+	</data>
+</odoo>
