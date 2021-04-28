@@ -17,3 +17,11 @@ class ResPartner(models.Model):
         string='Enrollment',
         help='Enrollment of the student, if the user is a student.'
         )
+    student_subject_id = fields.One2many(
+        'student.subject',
+        'student_id',
+        string='Subjects',
+        help='Subjects of the student',
+        readonly=True,
+        store=True
+        )
