@@ -5,8 +5,8 @@ from odoo import models, fields, api, _
 from odoo.exceptions import UserError, RedirectWarning, ValidationError
 
 
-class ProductProduct(models.Model):
-    _inherit = "product.product"
+class ProductTemplate(models.Model):
+    _inherit = "product.template"
 
     # Columns
     is_course = fields.Boolean(

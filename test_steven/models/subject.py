@@ -6,6 +6,7 @@ from odoo.exceptions import UserError, RedirectWarning, ValidationError
 
 class Subject(models.Model):
     _name = 'subject'
+    _inherit = ['portal.mixin', 'mail.thread', 'mail.activity.mixin', 'utm.mixin']
     _description = 'Career Subject'
     
     @api.onchange('subject_syllabus_ids')
@@ -35,24 +36,12 @@ class Subject(models.Model):
         help='Teacher who teaching the subject.',
         required=True
         )
-    max_score = fields.Float(
-        string="Max Score",
-        help='Max Score of the subject',
-        readonly=True,
-        store=True
-        )
     total_hours = fields.Integer(
         string=u'Total Hours',
         compute='_compute_total_subject_hours',
         help=u'Total of hours of the subject.',
         readonly=True,
         store=True
-        )
-    career_id = fields.Many2one(
-        'career.enrollment',
-        string='Career',
-        help='Reference to the career.',
-        required=True
         )
     subject_syllabus_ids = fields.One2many(
         'subject.syllabus',

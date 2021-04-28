@@ -7,6 +7,7 @@ from odoo.exceptions import UserError, RedirectWarning, ValidationError
 
 class CareerEnrollment(models.Model):
     _name = 'career.enrollment'
+    _inherit = ['portal.mixin', 'mail.thread', 'mail.activity.mixin', 'utm.mixin']
     _description = 'Career that the student will follow.'
     
     # Columns
@@ -22,6 +23,5 @@ class CareerEnrollment(models.Model):
     subjects_ids = fields.Many2many(
         'subject',
         string='Subjects',
-        help='Subjects of the level',
-        readonly=True
+        help='Subjects of the level'
         )
