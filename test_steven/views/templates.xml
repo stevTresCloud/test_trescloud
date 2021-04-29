@@ -1,24 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <data>
-<!--
-        <template id="listing">
-          <ul>
-            <li t-foreach="objects" t-as="object">
-              <a t-attf-href="#{ root }/objects/#{ object.id }">
-                <t t-esc="object.display_name"/>
-              </a>
-            </li>
-          </ul>
-        </template>
-        <template id="object">
-          <h1><t t-esc="object.display_name"/></h1>
-          <dl>
-            <t t-foreach="object._fields" t-as="field">
-              <dt><t t-esc="field"/></dt>
-              <dd><t t-esc="object[field]"/></dd>
-            </t>
-          </dl>
-        </template>
--->
-    </data>
+	<data>
+		<template id="report_enrollment">
+			<t t-call="web.html_container">
+				<t t-foreach="docs" t-as="o">
+					<t t-call="web.external_layout">
+						<div class="page">
+							<h2>
+								Matrícula
+								<span t-field="o.name" />
+							</h2>
+							<hr></hr>
+							<p>
+								Estudiante:
+								<span t-field="o.student_partner_id.name" />
+							</p>
+							<hr></hr>
+							<p>
+								Jornada:
+								<span t-field="o.day_trip" />
+							</p>
+							<hr></hr>
+							<p>
+								Fecha Inicio Carrera:
+								<span t-field="o.start_date"
+									t-options='{"format": "dd/MM/yyyy"}' />
+							</p>
+							<hr></hr>
+							<p>
+								Fecha Finalización Carrera:
+								<span t-field="o.end_date"
+									t-options='{"format": "dd/MM/yyyy"}' />
+							</p>
+							<hr></hr>
+							<p>
+								Código de Curso:
+								<span t-field="o.course_code" />
+							</p>
+							<hr></hr>
+							<p>
+								Carrera:
+								<span t-field="o.career_enrollment_id.name" />
+							</p>
+						</div>
+						<table class="table table-striped">
+							<thead>
+								<tr>
+									<th scope="col">#</th>
+									<th scope="col">Materia</th>
+									<th scope="col">Nota Mínima</th>
+									<th scope="col">Nota Máxima</th>
+									<th scope="col">Promedio</th>
+									<th scope="col">Estado</th>
+									<th scope="col">Horas totales</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr t-foreach='o.student_subjects_ids' t-as='line'>
+									<td>
+										<span t-esc="line.id" />
+									</td>
+									<td>
+										<span t-esc="line.name.name" />
+									</td>
+									<td>
+										<span t-esc="line.min_score" />
+									</td>
+									<td>
+										<span t-esc="line.max_score" />
+									</td>
+									<td>
+										<span t-esc="line.average" />
+									</td>
+									<td>
+										<span t-esc="line.is_approved" />
+									</td>
+									<td>
+										<span t-esc="line.total_hours" />
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</t>
+				</t>
+			</t>
+		</template>
+	</data>
 </odoo>

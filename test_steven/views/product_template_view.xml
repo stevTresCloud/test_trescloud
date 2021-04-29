@@ -8,7 +8,7 @@
 			<field name="arch" type="xml">
 				<xpath expr="//field[@name='categ_id']" position="after">
 					<field name="is_course" />
-					<field name="course_code" attrs="{'invisible': [('is_course','=',False)]}"/>
+					<field name="course_code" attrs="{'invisible': [('is_course','=',False)],'required': [('is_course','=',True)]}"/>
 				</xpath>
 			</field>
 		</record>

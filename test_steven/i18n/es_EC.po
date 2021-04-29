@@ -1,0 +1,994 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* test_steven
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-04-29 13:26+0000\n"
+"PO-Revision-Date: 2021-04-29 13:26+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: test_steven
+#: model_terms:ir.ui.view,arch_db:test_steven.view_career_enrollment_form
+msgid ""
+"<small>These subjects will be assigned to the student automatically, when "
+"the enrollment creation is validated.</small>"
+msgstr ""
+
+#. module: test_steven
+#: model:ir.model.fields,field_description:test_steven.field_career_enrollment__access_warning
+#: model:ir.model.fields,field_description:test_steven.field_enrollment__access_warning
+#: model:ir.model.fields,field_description:test_steven.field_student_subject__access_warning
+#: model:ir.model.fields,field_description:test_steven.field_subject__access_warning
+msgid "Access warning"
+msgstr "Advertencia de acceso"
+
+#. module: test_steven
+#: model:ir.model.fields,field_description:test_steven.field_career_enrollment__message_needaction
+#: model:ir.model.fields,field_description:test_steven.field_enrollment__message_needaction
+#: model:ir.model.fields,field_description:test_steven.field_student_subject__message_needaction
+#: model:ir.model.fields,field_description:test_steven.field_subject__message_needaction
+msgid "Action Needed"
+msgstr "Acción necesaria"
+
+#. module: test_steven
+#: model:ir.model.fields,field_description:test_steven.field_career_enrollment__activity_ids
+#: model:ir.model.fields,field_description:test_steven.field_enrollment__activity_ids
+#: model:ir.model.fields,field_description:test_steven.field_student_subject__activity_ids
+#: model:ir.model.fields,field_description:test_steven.field_subject__activity_ids
+msgid "Activities"
+msgstr "Actividades"
+
+#. module: test_steven
+#: model:ir.model.fields,field_description:test_steven.field_career_enrollment__activity_exception_decoration
+#: model:ir.model.fields,field_description:test_steven.field_enrollment__activity_exception_decoration
+#: model:ir.model.fields,field_description:test_steven.field_student_subject__activity_exception_decoration
+#: model:ir.model.fields,field_description:test_steven.field_subject__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Decoración de excepción de actividad"
+
+#. module: test_steven
+#: model:ir.model.fields,field_description:test_steven.field_career_enrollment__activity_state
+#: model:ir.model.fields,field_description:test_steven.field_enrollment__activity_state
+#: model:ir.model.fields,field_description:test_steven.field_student_subject__activity_state
+#: model:ir.model.fields,field_description:test_steven.field_subject__activity_state
+msgid "Activity State"
+msgstr "Estado de actividad"
+
+#. module: test_steven
+#: model:ir.model.fields,field_description:test_steven.field_career_enrollment__activity_type_icon
+#: model:ir.model.fields,field_description:test_steven.field_enrollment__activity_type_icon
+#: model:ir.model.fields,field_description:test_steven.field_student_subject__activity_type_icon
+#: model:ir.model.fields,field_description:test_steven.field_subject__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Icono de tipo de actividad"
+
+#. module: test_steven
+#: model:ir.model.fields.selection,name:test_steven.selection__student_subject__is_approved__approved
+msgid "Approved"
+msgstr "Aprobado"
+
+#. module: test_steven
+#: model:ir.model.fields,field_description:test_steven.field_career_enrollment__message_attachment_count
+#: model:ir.model.fields,field_description:test_steven.field_enrollment__message_attachment_count
+#: model:ir.model.fields,field_description:test_steven.field_student_subject__message_attachment_count
+#: model:ir.model.fields,field_description:test_steven.field_subject__message_attachment_count
+msgid "Attachment Count"
+msgstr "Recuento de archivos adjuntos"
+
+#. module: test_steven
+#: model:ir.model.fields,field_description:test_steven.field_student_subject__average
+msgid "Average"
+msgstr "Promedio"
+
+#. module: test_steven
+#: model:ir.model.fields,help:test_steven.field_student_subject__average
+msgid "Average of the three levels."
+msgstr "Promedio de los tres niveles"
+
+#. module: test_steven
+#: model:ir.model.fields,field_description:test_steven.field_career_enrollment__campaign_id
+#: model:ir.model.fields,field_description:test_steven.field_enrollment__campaign_id
+#: model:ir.model.fields,field_description:test_steven.field_student_subject__campaign_id
+#: model:ir.model.fields,field_description:test_steven.field_subject__campaign_id
+msgid "Campaign"
+msgstr "Campaña"
+
+#. module: test_steven
+#: model:ir.model.fields.selection,name:test_steven.selection__enrollment__state__cancel
+#: model_terms:ir.ui.view,arch_db:test_steven.view_enrollment_form
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: test_steven
+#: model:ir.model.fields,field_description:test_steven.field_career_enrollment__name
+#: model:ir.model.fields,field_description:test_steven.field_enrollment__career_enrollment_id
+#: model_terms:ir.ui.view,arch_db:test_steven.view_career_enrollment_form
+#: model_terms:ir.ui.view,arch_db:test_steven.view_enrollment_form
+msgid "Career"
+msgstr "Carrera"
+
+#. module: test_steven
+#: model:ir.model,name:test_steven.model_subject
+msgid "Career Subject"
+msgstr "Materia de la carrera"
+
+#. module: test_steven
+#: model:ir.model.fields,help:test_steven.field_enrollment__career_enrollment_id
+msgid "Career that the student will follow."
+msgstr "Carrera que seguirá el alumno"
+
+#. module: test_steven
+#: model:ir.model,name:test_steven.model_career_enrollment
+msgid "CareerEnrollment"
+msgstr "Carrera de la matriculación"
+
+#. module: test_steven
+#: model:ir.actions.act_window,name:test_steven.action_career_enrollment_view
+#: model_terms:ir.actions.act_window,help:test_steven.action_career_enrollment_view
+#: model_terms:ir.ui.view,arch_db:test_steven.view_career_enrollment_tree
+msgid "Careers"
+msgstr "Carreras"
+
+#. module: test_steven
+#: model:ir.ui.menu,name:test_steven.menu_career_enrollment
+#: model:ir.ui.menu,name:test_steven.menu_sales_career_enrollment
+msgid "Carrers"
+msgstr "Carreras"
+
+#. module: test_steven
+#: model:ir.model,name:test_steven.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: test_steven
+#: model:ir.model.fields,field_description:test_steven.field_enrollment__course_code
+#: model:ir.model.fields,field_description:test_steven.field_product_product__course_code
+#: model:ir.model.fields,field_description:test_steven.field_product_template__course_code
+msgid "Course Code"
+msgstr "Código de Curso"
+
+#. module: test_steven
+#: model:ir.model.fields,help:test_steven.field_enrollment__course_code
+msgid "Course Code for the enrollment in the partner student."
+msgstr "Código del curso para la matrícula en el alumno asociado."
+
+#. module: test_steven
+#: model:ir.model.fields,field_description:test_steven.field_career_enrollment__create_uid
+#: model:ir.model.fields,field_description:test_steven.field_enrollment__create_uid
+#: model:ir.model.fields,field_description:test_steven.field_student_subject__create_uid
+#: model:ir.model.fields,field_description:test_steven.field_student_subject_scores__create_uid
+#: model:ir.model.fields,field_description:test_steven.field_subject__create_uid
+#: model:ir.model.fields,field_description:test_steven.field_subject_syllabus__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: test_steven
+#: model:ir.model.fields,field_description:test_steven.field_career_enrollment__create_date
+#: model:ir.model.fields,field_description:test_steven.field_enrollment__create_date
+#: model:ir.model.fields,field_description:test_steven.field_student_subject__create_date
+#: model:ir.model.fields,field_description:test_steven.field_student_subject_scores__create_date
+#: model:ir.model.fields,field_description:test_steven.field_subject__create_date
+#: model:ir.model.fields,field_description:test_steven.field_subject_syllabus__create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: test_steven
+#: model:ir.model.fields,help:test_steven.field_career_enrollment__access_url
+#: model:ir.model.fields,help:test_steven.field_enrollment__access_url
+#: model:ir.model.fields,help:test_steven.field_student_subject__access_url
+#: model:ir.model.fields,help:test_steven.field_subject__access_url
+msgid "Customer Portal URL"
+msgstr "URL del portal del cliente"
+
+#. module: test_steven
+#: model:ir.model.fields,field_description:test_steven.field_enrollment__day_trip
+msgid "Day Trip"
+msgstr "Jornada"
+
+#. module: test_steven
+#: model:ir.model.fields,help:test_steven.field_enrollment__day_trip
+msgid "Day trip in which the student will study."
+msgstr "Jornada en la que el estudiará el alumno"
+
+#. module: test_steven
+#: model:ir.model.fields,field_description:test_steven.field_career_enrollment__description
+#: model:ir.model.fields,field_description:test_steven.field_subject__description
+#: model:ir.model.fields,field_description:test_steven.field_subject_syllabus__description
+msgid "Description"
+msgstr "Descripción"
+
+#. module: test_steven
+#: model:ir.model.fields,help:test_steven.field_career_enrollment__description
+msgid "Description of the career."
+msgstr "Descripción de la carrera"
+
+#. module: test_steven
+#: model:ir.model.fields,help:test_steven.field_subject__description
+msgid "Description of the subject. You can put any observation too."
+msgstr "Descripción de la materia. También puedes poner cualquier observación"
+
+#. module: test_steven
+#: model:ir.model.fields,help:test_steven.field_subject_syllabus__description
+msgid "Description of the syllabus. You can put any observation too."
+msgstr "Descripción del plan de estudios. También puedes poner cualquier observación."
+
+#. module: test_steven
+#: model_terms:ir.ui.view,arch_db:test_steven.student_subjects_view_form
+#: model_terms:ir.ui.view,arch_db:test_steven.view_enrollment_form
+#: model_terms:ir.ui.view,arch_db:test_steven.view_subject_form
+msgid "Details"
+msgstr "Detalles"
+
+#. module: test_steven
+#: model:ir.model.fields.selection,name:test_steven.selection__student_subject__is_approved__disapproved
+msgid "Disapproved"
+msgstr "Reprobado"
+
+#. module: test_steven
+#: model:ir.model.fields,field_description:test_steven.field_career_enrollment__display_name
+#: model:ir.model.fields,field_description:test_steven.field_enrollment__display_name
+#: model:ir.model.fields,field_description:test_steven.field_product_template__display_name
+#: model:ir.model.fields,field_description:test_steven.field_res_partner__display_name
+#: model:ir.model.fields,field_description:test_steven.field_sale_order__display_name
+#: model:ir.model.fields,field_description:test_steven.field_student_subject__display_name
+#: model:ir.model.fields,field_description:test_steven.field_student_subject_scores__display_name
+#: model:ir.model.fields,field_description:test_steven.field_subject__display_name
+#: model:ir.model.fields,field_description:test_steven.field_subject_syllabus__display_name
+msgid "Display Name"
+msgstr "Nombre a Mostrar"
+
+#. module: test_steven
+#: model:ir.model.fields.selection,name:test_steven.selection__enrollment__state__draft
+msgid "Draft"
+msgstr "Borrador"
+
+#. module: test_steven
+#: model:ir.model.fields,field_description:test_steven.field_enrollment__end_date
+msgid "End Date"
+msgstr "Día de finalización"
+
+#. module: test_steven
+#: model:ir.model.fields,help:test_steven.field_enrollment__end_date
+msgid "Ending day the career finish."
+msgstr "Día que termina la carrera"
+
+#. module: test_steven
+#: model:ir.model.fields,field_description:test_steven.field_enrollment__name
+#: model:ir.model.fields,field_description:test_steven.field_res_partner__enrollment_id
+#: model:ir.model.fields,field_description:test_steven.field_res_users__enrollment_id
+#: model:ir.model.fields,field_description:test_steven.field_sale_order__enrollment_id
+#: model:ir.model.fields,field_description:test_steven.field_student_subject__enrollment_student_id
+#: model:ir.ui.menu,name:test_steven.menu_enrollment_root
+#: model_terms:ir.ui.view,arch_db:test_steven.view_enrollment_form
+#: model_terms:ir.ui.view,arch_db:test_steven.view_student_subjects_form
+msgid "Enrollment"
+msgstr "Matriculación"
+
+#. module: test_steven
+#: model:ir.model.fields,help:test_steven.field_res_partner__enrollment_id
+#: model:ir.model.fields,help:test_steven.field_res_users__enrollment_id
+msgid "Enrollment of the student, if the user is a student."
+msgstr "Matriculación del estudiante, si el usuario es un estudiante"
+
+#. module: test_steven
+#: model:ir.model.fields,help:test_steven.field_sale_order__enrollment_id
+msgid "Enrollment of the student, if this transaction is a new enrollment."
+msgstr "Matriculación del estudiante, si la transacción es una matriculación"
+
+#. module: test_steven
+#: model:ir.model,name:test_steven.model_enrollment
+msgid "Enrollment of the student."
+msgstr "Matriculación del estudiante"
+
+#. module: test_steven
+#: model_terms:ir.ui.view,arch_db:test_steven.view_enrollment_form
+msgid "Enrollment..."
+msgstr "Matricula..."
+
+#. module: test_steven
+#: model:ir.actions.act_window,name:test_steven.action_enrollment_view
+#: model:ir.ui.menu,name:test_steven.menu_enrollment
+#: model:ir.ui.menu,name:test_steven.menu_sales_enrollment
+#: model_terms:ir.actions.act_window,help:test_steven.action_enrollment_view
+#: model_terms:ir.ui.view,arch_db:test_steven.view_enrollment_tree
+msgid "Enrollments"
+msgstr "Matricula"
+
+#. module: test_steven
+#: model:ir.ui.menu,name:test_steven.menu_sales_enrollment_categ
+msgid "Enrollments menú"
+msgstr "Menú matrícula"
+
+#. module: test_steven
+#: model:ir.model.fields.selection,name:test_steven.selection__enrollment__day_trip__evening
+msgid "Evening"
+msgstr "Vespertina"
+
+#. module: test_steven
+#: model:ir.model.fields,field_description:test_steven.field_career_enrollment__message_follower_ids
+#: model:ir.model.fields,field_description:test_steven.field_enrollment__message_follower_ids
+#: model:ir.model.fields,field_description:test_steven.field_student_subject__message_follower_ids
+#: model:ir.model.fields,field_description:test_steven.field_subject__message_follower_ids
+msgid "Followers"
+msgstr "Seguidores"
+
+#. module: test_steven
+#: model:ir.model.fields,field_description:test_steven.field_career_enrollment__message_channel_ids
+#: model:ir.model.fields,field_description:test_steven.field_enrollment__message_channel_ids
+#: model:ir.model.fields,field_description:test_steven.field_student_subject__message_channel_ids
+#: model:ir.model.fields,field_description:test_steven.field_subject__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Seguidores(Canal)"
+
+#. module: test_steven
+#: model:ir.model.fields,field_description:test_steven.field_career_enrollment__message_partner_ids
+#: model:ir.model.fields,field_description:test_steven.field_enrollment__message_partner_ids
+#: model:ir.model.fields,field_description:test_steven.field_student_subject__message_partner_ids
+#: model:ir.model.fields,field_description:test_steven.field_subject__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Seguidores(Socios)"
+
+#. module: test_steven
+#: model:ir.model.fields,help:test_steven.field_career_enrollment__activity_type_icon
+#: model:ir.model.fields,help:test_steven.field_enrollment__activity_type_icon
+#: model:ir.model.fields,help:test_steven.field_student_subject__activity_type_icon
+#: model:ir.model.fields,help:test_steven.field_subject__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Icono de fuente impresionante, p. Ej. fa-tasks"
+
+#. module: test_steven
+#: model:ir.model.fields,field_description:test_steven.field_subject_syllabus__syllabus_hours
+#: model_terms:ir.ui.view,arch_db:test_steven.view_subject_form
+msgid "Hours"
+msgstr "Horas"
+
+#. module: test_steven
+#: model:ir.model.fields,field_description:test_steven.field_career_enrollment__id
+#: model:ir.model.fields,field_description:test_steven.field_enrollment__id
+#: model:ir.model.fields,field_description:test_steven.field_product_template__id
+#: model:ir.model.fields,field_description:test_steven.field_res_partner__id
+#: model:ir.model.fields,field_description:test_steven.field_sale_order__id
+#: model:ir.model.fields,field_description:test_steven.field_student_subject__id
+#: model:ir.model.fields,field_description:test_steven.field_student_subject_scores__id
+#: model:ir.model.fields,field_description:test_steven.field_subject__id
+#: model:ir.model.fields,field_description:test_steven.field_subject_syllabus__id
+msgid "ID"
+msgstr "ID"
+
+#. module: test_steven
+#: model:ir.model.fields,field_description:test_steven.field_career_enrollment__activity_exception_icon
+#: model:ir.model.fields,field_description:test_steven.field_enrollment__activity_exception_icon
+#: model:ir.model.fields,field_description:test_steven.field_student_subject__activity_exception_icon
+#: model:ir.model.fields,field_description:test_steven.field_subject__activity_exception_icon
+msgid "Icon"
+msgstr "Icono"
+
+#. module: test_steven
+#: model:ir.model.fields,help:test_steven.field_career_enrollment__activity_exception_icon
+#: model:ir.model.fields,help:test_steven.field_enrollment__activity_exception_icon
+#: model:ir.model.fields,help:test_steven.field_student_subject__activity_exception_icon
+#: model:ir.model.fields,help:test_steven.field_subject__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Icono para indicar una actividad de excepción"
+
+#. module: test_steven
+#: model:ir.model.fields,help:test_steven.field_career_enrollment__message_needaction
+#: model:ir.model.fields,help:test_steven.field_career_enrollment__message_unread
+#: model:ir.model.fields,help:test_steven.field_enrollment__message_needaction
+#: model:ir.model.fields,help:test_steven.field_enrollment__message_unread
+#: model:ir.model.fields,help:test_steven.field_student_subject__message_needaction
+#: model:ir.model.fields,help:test_steven.field_student_subject__message_unread
+#: model:ir.model.fields,help:test_steven.field_subject__message_needaction
+#: model:ir.model.fields,help:test_steven.field_subject__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "Si está marcado, los mensajes nuevos requieren su atención"
+
+#. module: test_steven
+#: model:ir.model.fields,help:test_steven.field_career_enrollment__message_has_error
+#: model:ir.model.fields,help:test_steven.field_career_enrollment__message_has_sms_error
+#: model:ir.model.fields,help:test_steven.field_enrollment__message_has_error
+#: model:ir.model.fields,help:test_steven.field_enrollment__message_has_sms_error
+#: model:ir.model.fields,help:test_steven.field_student_subject__message_has_error
+#: model:ir.model.fields,help:test_steven.field_student_subject__message_has_sms_error
+#: model:ir.model.fields,help:test_steven.field_subject__message_has_error
+#: model:ir.model.fields,help:test_steven.field_subject__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Si está marcado, algunos mensajes tienen un error de entrega."
+
+#. module: test_steven
+#: model_terms:ir.ui.view,arch_db:test_steven.view_subject_form
+msgid "Insert description of the subject"
+msgstr "Insertar descripción del tema"
+
+#. module: test_steven
+#: model:ir.model.fields,field_description:test_steven.field_student_subject__is_approved
+msgid "Is Approved"
+msgstr "¿Está aprobado?"
+
+#. module: test_steven
+#: model:ir.model.fields,field_description:test_steven.field_sale_order__is_new_enrollment
+msgid "Is Enrollemnt transaction"
+msgstr "¿Es una matrícula?"
+
+#. module: test_steven
+#: model:ir.model.fields,field_description:test_steven.field_career_enrollment__message_is_follower
+#: model:ir.model.fields,field_description:test_steven.field_enrollment__message_is_follower
+#: model:ir.model.fields,field_description:test_steven.field_student_subject__message_is_follower
+#: model:ir.model.fields,field_description:test_steven.field_subject__message_is_follower
+msgid "Is Follower"
+msgstr "¿Es seguidor?"
+
+#. module: test_steven
+#: model:ir.model.fields,field_description:test_steven.field_res_partner__is_student
+#: model:ir.model.fields,field_description:test_steven.field_res_users__is_student
+msgid "Is Student"
+msgstr "¿Es estudiante?"
+
+#. module: test_steven
+#: model:ir.model.fields,field_description:test_steven.field_product_product__is_course
+#: model:ir.model.fields,field_description:test_steven.field_product_template__is_course
+msgid "Is curse"
+msgstr "¿Es curso?"
+
+#. module: test_steven
+#: model:ir.model.fields,field_description:test_steven.field_career_enrollment____last_update
+#: model:ir.model.fields,field_description:test_steven.field_enrollment____last_update
+#: model:ir.model.fields,field_description:test_steven.field_product_template____last_update
+#: model:ir.model.fields,field_description:test_steven.field_res_partner____last_update
+#: model:ir.model.fields,field_description:test_steven.field_sale_order____last_update
+#: model:ir.model.fields,field_description:test_steven.field_student_subject____last_update
+#: model:ir.model.fields,field_description:test_steven.field_student_subject_scores____last_update
+#: model:ir.model.fields,field_description:test_steven.field_subject____last_update
+#: model:ir.model.fields,field_description:test_steven.field_subject_syllabus____last_update
+msgid "Last Modified on"
+msgstr "Fecha de modificación"
+
+#. module: test_steven
+#: model:ir.model.fields,field_description:test_steven.field_career_enrollment__write_uid
+#: model:ir.model.fields,field_description:test_steven.field_enrollment__write_uid
+#: model:ir.model.fields,field_description:test_steven.field_student_subject__write_uid
+#: model:ir.model.fields,field_description:test_steven.field_student_subject_scores__write_uid
+#: model:ir.model.fields,field_description:test_steven.field_subject__write_uid
+#: model:ir.model.fields,field_description:test_steven.field_subject_syllabus__write_uid
+msgid "Last Updated by"
+msgstr "Actualizado por última vez por"
+
+#. module: test_steven
+#: model:ir.model.fields,field_description:test_steven.field_career_enrollment__write_date
+#: model:ir.model.fields,field_description:test_steven.field_enrollment__write_date
+#: model:ir.model.fields,field_description:test_steven.field_student_subject__write_date
+#: model:ir.model.fields,field_description:test_steven.field_student_subject_scores__write_date
+#: model:ir.model.fields,field_description:test_steven.field_subject__write_date
+#: model:ir.model.fields,field_description:test_steven.field_subject_syllabus__write_date
+msgid "Last Updated on"
+msgstr "Ultima actualización en"
+
+#. module: test_steven
+#: model:ir.model.fields,field_description:test_steven.field_career_enrollment__message_main_attachment_id
+#: model:ir.model.fields,field_description:test_steven.field_enrollment__message_main_attachment_id
+#: model:ir.model.fields,field_description:test_steven.field_student_subject__message_main_attachment_id
+#: model:ir.model.fields,field_description:test_steven.field_subject__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Adjunto principal"
+
+#. module: test_steven
+#: model:ir.ui.menu,name:test_steven.menu_enrollment_categ
+msgid "Maintenance"
+msgstr "Mantenimiento"
+
+#. module: test_steven
+#: model:ir.model.fields.selection,name:test_steven.selection__enrollment__state__matriculate
+#: model_terms:ir.ui.view,arch_db:test_steven.view_enrollment_form
+msgid "Matriculate"
+msgstr "Matriculado"
+
+#. module: test_steven
+#: model:ir.model.fields,field_description:test_steven.field_student_subject__max_score
+msgid "Max Score"
+msgstr "Nota Máxima"
+
+#. module: test_steven
+#: model:ir.model.fields,help:test_steven.field_student_subject__max_score
+msgid "Max Score of the subject"
+msgstr "Nota máxima de la materia"
+
+#. module: test_steven
+#: model:ir.model.fields,field_description:test_steven.field_career_enrollment__medium_id
+#: model:ir.model.fields,field_description:test_steven.field_enrollment__medium_id
+#: model:ir.model.fields,field_description:test_steven.field_student_subject__medium_id
+#: model:ir.model.fields,field_description:test_steven.field_subject__medium_id
+msgid "Medium"
+msgstr "Medio"
+
+#. module: test_steven
+#: model:ir.model.fields,field_description:test_steven.field_career_enrollment__message_has_error
+#: model:ir.model.fields,field_description:test_steven.field_enrollment__message_has_error
+#: model:ir.model.fields,field_description:test_steven.field_student_subject__message_has_error
+#: model:ir.model.fields,field_description:test_steven.field_subject__message_has_error
+msgid "Message Delivery error"
+msgstr "Error de entrega de mensaje"
+
+#. module: test_steven
+#: model:ir.model.fields,field_description:test_steven.field_career_enrollment__message_ids
+#: model:ir.model.fields,field_description:test_steven.field_enrollment__message_ids
+#: model:ir.model.fields,field_description:test_steven.field_student_subject__message_ids
+#: model:ir.model.fields,field_description:test_steven.field_subject__message_ids
+msgid "Messages"
+msgstr "Mensaje"
+
+#. module: test_steven
+#: model:ir.model.fields,field_description:test_steven.field_student_subject__min_score
+msgid "Min Score"
+msgstr "Nota mínima"
+
+#. module: test_steven
+#: model:ir.model.fields,help:test_steven.field_student_subject__min_score
+msgid "Min Score of the subject"
+msgstr "Puntuación mínima de la asignatura"
+
+#. module: test_steven
+#: model:ir.model.fields.selection,name:test_steven.selection__enrollment__day_trip__morning
+msgid "Morning"
+msgstr "Matutina"
+
+#. module: test_steven
+#: model:ir.model.fields,field_description:test_steven.field_student_subject_scores__name
+msgid "Name Score"
+msgstr "Asunto de la nota"
+
+#. module: test_steven
+#: model:ir.model.fields,field_description:test_steven.field_student_subject__name
+msgid "Name Subject"
+msgstr "Nombre de la materia"
+
+#. module: test_steven
+#: model_terms:ir.ui.view,arch_db:test_steven.view_career_enrollment_form
+msgid "Name of career"
+msgstr "Nombre de la carrera"
+
+#. module: test_steven
+#: model:ir.model.fields,help:test_steven.field_career_enrollment__name
+msgid "Name of the career."
+msgstr "Nombre de la carrera"
+
+#. module: test_steven
+#: model:ir.model.fields,help:test_steven.field_enrollment__name
+msgid "Name of the enrollment."
+msgstr "Nombre de la matrícula"
+
+#. module: test_steven
+#: model:ir.model.fields,help:test_steven.field_student_subject_scores__name
+msgid "Name of the score."
+msgstr "Asunto de la nota"
+
+#. module: test_steven
+#: model:ir.model.fields,help:test_steven.field_subject__name
+msgid "Name of the subject."
+msgstr "Nombre de la materia"
+
+#. module: test_steven
+#: model:ir.model.fields,help:test_steven.field_subject_syllabus__name
+msgid "Name of the syllabus."
+msgstr "Nombre del tema"
+
+#. module: test_steven
+#: model:ir.model.fields,field_description:test_steven.field_subject_syllabus__name
+msgid "Name syllabus"
+msgstr "Nombre del tema"
+
+#. module: test_steven
+#: code:addons/test_steven/models/enrollment.py:0
+#: code:addons/test_steven/models/enrollment.py:0
+#, python-format
+msgid "New"
+msgstr "Nuevo"
+
+#. module: test_steven
+#: model:ir.model.fields,field_description:test_steven.field_career_enrollment__activity_date_deadline
+#: model:ir.model.fields,field_description:test_steven.field_enrollment__activity_date_deadline
+#: model:ir.model.fields,field_description:test_steven.field_student_subject__activity_date_deadline
+#: model:ir.model.fields,field_description:test_steven.field_subject__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Fecha límite para la próxima actividad"
+
+#. module: test_steven
+#: model:ir.model.fields,field_description:test_steven.field_career_enrollment__activity_summary
+#: model:ir.model.fields,field_description:test_steven.field_enrollment__activity_summary
+#: model:ir.model.fields,field_description:test_steven.field_student_subject__activity_summary
+#: model:ir.model.fields,field_description:test_steven.field_subject__activity_summary
+msgid "Next Activity Summary"
+msgstr "Resumen de la siguiente actividad"
+
+#. module: test_steven
+#: model:ir.model.fields,field_description:test_steven.field_career_enrollment__activity_type_id
+#: model:ir.model.fields,field_description:test_steven.field_enrollment__activity_type_id
+#: model:ir.model.fields,field_description:test_steven.field_student_subject__activity_type_id
+#: model:ir.model.fields,field_description:test_steven.field_subject__activity_type_id
+msgid "Next Activity Type"
+msgstr "Siguiente tipo de actividad"
+
+#. module: test_steven
+#: model:ir.model.fields,field_description:test_steven.field_career_enrollment__message_needaction_counter
+#: model:ir.model.fields,field_description:test_steven.field_enrollment__message_needaction_counter
+#: model:ir.model.fields,field_description:test_steven.field_student_subject__message_needaction_counter
+#: model:ir.model.fields,field_description:test_steven.field_subject__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Número de acciones"
+
+#. module: test_steven
+#: model:ir.model.fields,field_description:test_steven.field_career_enrollment__message_has_error_counter
+#: model:ir.model.fields,field_description:test_steven.field_enrollment__message_has_error_counter
+#: model:ir.model.fields,field_description:test_steven.field_student_subject__message_has_error_counter
+#: model:ir.model.fields,field_description:test_steven.field_subject__message_has_error_counter
+msgid "Number of errors"
+msgstr "Número de errores"
+
+#. module: test_steven
+#: model:ir.model.fields,help:test_steven.field_subject_syllabus__syllabus_hours
+msgid "Number of hours of the syllabus."
+msgstr "Número de horas del tema"
+
+#. module: test_steven
+#: model:ir.model.fields,help:test_steven.field_career_enrollment__message_needaction_counter
+#: model:ir.model.fields,help:test_steven.field_enrollment__message_needaction_counter
+#: model:ir.model.fields,help:test_steven.field_student_subject__message_needaction_counter
+#: model:ir.model.fields,help:test_steven.field_subject__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Número de mensajes que requieren una acción"
+
+#. module: test_steven
+#: model:ir.model.fields,help:test_steven.field_career_enrollment__message_has_error_counter
+#: model:ir.model.fields,help:test_steven.field_enrollment__message_has_error_counter
+#: model:ir.model.fields,help:test_steven.field_student_subject__message_has_error_counter
+#: model:ir.model.fields,help:test_steven.field_subject__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Número de mensajes con error de entrega"
+
+#. module: test_steven
+#: model:ir.model.fields,help:test_steven.field_career_enrollment__message_unread_counter
+#: model:ir.model.fields,help:test_steven.field_enrollment__message_unread_counter
+#: model:ir.model.fields,help:test_steven.field_student_subject__message_unread_counter
+#: model:ir.model.fields,help:test_steven.field_subject__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Número de mensajes no leídos"
+
+#. module: test_steven
+#: model:ir.model.fields,field_description:test_steven.field_career_enrollment__access_url
+#: model:ir.model.fields,field_description:test_steven.field_enrollment__access_url
+#: model:ir.model.fields,field_description:test_steven.field_student_subject__access_url
+#: model:ir.model.fields,field_description:test_steven.field_subject__access_url
+msgid "Portal Access URL"
+msgstr "URL de acceso al portal"
+
+#. module: test_steven
+#: model:ir.model,name:test_steven.model_product_template
+msgid "Product Template"
+msgstr "Plantilla de producto"
+
+#. module: test_steven
+#: model:ir.model.fields,help:test_steven.field_student_subject__enrollment_student_id
+msgid "Reference of the Student enrollment."
+msgstr "Referencia de la matrícula del estudiante"
+
+#. module: test_steven
+#: model:ir.model.fields,help:test_steven.field_student_subject__student_id
+msgid "Reference of the Student."
+msgstr "Referencia del estudiante"
+
+#. module: test_steven
+#: model:ir.model.fields,help:test_steven.field_student_subject__name
+msgid "Reference of the Subject."
+msgstr "Referencia de la materia"
+
+#. module: test_steven
+#: model:ir.model.fields,help:test_steven.field_student_subject_scores__student_subject_id
+#: model:ir.model.fields,help:test_steven.field_subject_syllabus__subject_id
+msgid "Reference of the subject."
+msgstr "Referencia de la materia"
+
+#. module: test_steven
+#: model:ir.model.fields,help:test_steven.field_enrollment__sale_order_id
+msgid "Reference transaction where enrollment was created."
+msgstr "Referencia de la transacción donde la matrícula fue creada"
+
+#. module: test_steven
+#: model:ir.model.fields,field_description:test_steven.field_career_enrollment__activity_user_id
+#: model:ir.model.fields,field_description:test_steven.field_enrollment__activity_user_id
+#: model:ir.model.fields,field_description:test_steven.field_student_subject__activity_user_id
+#: model:ir.model.fields,field_description:test_steven.field_subject__activity_user_id
+msgid "Responsible User"
+msgstr "Usuario Responsable"
+
+#. module: test_steven
+#: model:ir.model.fields,field_description:test_steven.field_career_enrollment__message_has_sms_error
+#: model:ir.model.fields,field_description:test_steven.field_enrollment__message_has_sms_error
+#: model:ir.model.fields,field_description:test_steven.field_student_subject__message_has_sms_error
+#: model:ir.model.fields,field_description:test_steven.field_subject__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Error de entrega de SMS"
+
+#. module: test_steven
+#: model:ir.model,name:test_steven.model_sale_order
+msgid "Sales Order"
+msgstr "Aviso para pedido de venta"
+
+#. module: test_steven
+#: model:ir.model.fields,field_description:test_steven.field_student_subject_scores__score
+msgid "Score"
+msgstr "Nota"
+
+#. module: test_steven
+#: model:ir.model.fields,help:test_steven.field_student_subject_scores__score
+msgid "Score of the subject"
+msgstr "Nota de la materia"
+
+#. module: test_steven
+#: model_terms:ir.ui.view,arch_db:test_steven.student_subjects_view_form
+msgid "Scores"
+msgstr "Notas"
+
+#. module: test_steven
+#: model:ir.model.fields,field_description:test_steven.field_career_enrollment__access_token
+#: model:ir.model.fields,field_description:test_steven.field_enrollment__access_token
+#: model:ir.model.fields,field_description:test_steven.field_student_subject__access_token
+#: model:ir.model.fields,field_description:test_steven.field_subject__access_token
+msgid "Security Token"
+msgstr "Código de seguridad"
+
+#. module: test_steven
+#: model:ir.model.fields,field_description:test_steven.field_career_enrollment__source_id
+#: model:ir.model.fields,field_description:test_steven.field_enrollment__source_id
+#: model:ir.model.fields,field_description:test_steven.field_student_subject__source_id
+#: model:ir.model.fields,field_description:test_steven.field_subject__source_id
+msgid "Source"
+msgstr "Fuente"
+
+#. module: test_steven
+#: model:ir.model.fields,field_description:test_steven.field_enrollment__start_date
+msgid "Start Date"
+msgstr "Start Date"
+
+#. module: test_steven
+#: model:ir.model.fields,help:test_steven.field_enrollment__start_date
+msgid "Starting day the career begins."
+msgstr "El día de inicio que comienza la carrera"
+
+#. module: test_steven
+#: model:ir.model.fields,field_description:test_steven.field_enrollment__state
+msgid "State"
+msgstr "Estado"
+
+#. module: test_steven
+#: model:ir.model.fields,help:test_steven.field_career_enrollment__activity_state
+#: model:ir.model.fields,help:test_steven.field_enrollment__activity_state
+#: model:ir.model.fields,help:test_steven.field_student_subject__activity_state
+#: model:ir.model.fields,help:test_steven.field_subject__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: test_steven
+#: model:ir.model.fields,field_description:test_steven.field_enrollment__student_partner_id
+#: model:ir.model.fields,field_description:test_steven.field_student_subject__student_id
+msgid "Student"
+msgstr "Estudiante"
+
+#. module: test_steven
+#: model:ir.model,name:test_steven.model_student_subject
+msgid "Student Subjects"
+msgstr "Materias del estudiante"
+
+#. module: test_steven
+#: model:ir.model.fields,help:test_steven.field_enrollment__student_partner_id
+msgid "Student of this enrollment."
+msgstr "Estudiante de esta matrícula"
+
+#. module: test_steven
+#: model:ir.model,name:test_steven.model_student_subject_scores
+msgid "Student subject scores"
+msgstr "Notas de la materia del estudiante "
+
+#. module: test_steven
+#: model:ir.model.fields,field_description:test_steven.field_student_subject_scores__student_subject_id
+#: model:ir.model.fields,field_description:test_steven.field_subject__name
+#: model:ir.model.fields,field_description:test_steven.field_subject_syllabus__subject_id
+#: model:ir.ui.menu,name:test_steven.menu_sales_subject
+#: model:ir.ui.menu,name:test_steven.menu_subject
+#: model_terms:ir.ui.view,arch_db:test_steven.view_subject_form
+msgid "Subject"
+msgstr "Materia"
+
+#. module: test_steven
+#: model:ir.model,name:test_steven.model_subject_syllabus
+msgid "Subject syllabus"
+msgstr "Temas de la materia"
+
+#. module: test_steven
+#: model:ir.actions.act_window,name:test_steven.action_subject_view
+#: model:ir.model.fields,field_description:test_steven.field_career_enrollment__subjects_ids
+#: model:ir.model.fields,field_description:test_steven.field_enrollment__student_subjects_ids
+#: model_terms:ir.actions.act_window,help:test_steven.action_subject_view
+#: model_terms:ir.ui.view,arch_db:test_steven.view_subject_tree
+msgid "Subjects"
+msgstr "Materias"
+
+#. module: test_steven
+#: model:ir.model.fields,field_description:test_steven.field_student_subject__subject_scores_ids
+#: model:ir.model.fields,field_description:test_steven.field_subject__subject_syllabus_ids
+msgid "Subjects Syllabus"
+msgstr "Temas de la materia"
+
+#. module: test_steven
+#: model:ir.model.fields,help:test_steven.field_career_enrollment__subjects_ids
+msgid "Subjects of the level"
+msgstr "Materias del nivel"
+
+#. module: test_steven
+#: model:ir.model.fields,help:test_steven.field_enrollment__student_subjects_ids
+msgid "Subjects of the student"
+msgstr "Materias del estudiante"
+
+#. module: test_steven
+#: model:ir.model.fields,help:test_steven.field_student_subject__subject_scores_ids
+#: model:ir.model.fields,help:test_steven.field_subject__subject_syllabus_ids
+msgid "Subjects syllabus"
+msgstr "Temas de la materia"
+
+#. module: test_steven
+#: model:ir.model.fields,field_description:test_steven.field_subject__teacher_employee_id
+msgid "Teacher"
+msgstr "Profesor"
+
+#. module: test_steven
+#: model:ir.model.fields,help:test_steven.field_subject__teacher_employee_id
+msgid "Teacher who teaching the subject."
+msgstr "Profesor que imparte la materia"
+
+#. module: test_steven
+#: model_terms:ir.actions.act_window,help:test_steven.action_career_enrollment_view
+msgid "There is no examples click here to add new Career."
+msgstr ""
+
+#. module: test_steven
+#: model_terms:ir.actions.act_window,help:test_steven.action_enrollment_view
+msgid "There is no examples click here to add new Enrollments."
+msgstr "No hay ejemplos haga clic aquí para agregar una nueva matrícula"
+
+#. module: test_steven
+#: model_terms:ir.actions.act_window,help:test_steven.action_subject_view
+msgid "There is no examples click here to add new Subjects."
+msgstr "No hay ejemplos, haga clic aquí para agregar nuevas Materias."
+
+#. module: test_steven
+#: model:ir.model.fields,help:test_steven.field_career_enrollment__campaign_id
+#: model:ir.model.fields,help:test_steven.field_enrollment__campaign_id
+#: model:ir.model.fields,help:test_steven.field_student_subject__campaign_id
+#: model:ir.model.fields,help:test_steven.field_subject__campaign_id
+msgid ""
+"This is a name that helps you keep track of your different campaign efforts,"
+" e.g. Fall_Drive, Christmas_Special"
+msgstr ""
+
+#. module: test_steven
+#: model:ir.model.fields,help:test_steven.field_career_enrollment__medium_id
+#: model:ir.model.fields,help:test_steven.field_enrollment__medium_id
+#: model:ir.model.fields,help:test_steven.field_student_subject__medium_id
+#: model:ir.model.fields,help:test_steven.field_subject__medium_id
+msgid "This is the method of delivery, e.g. Postcard, Email, or Banner Ad"
+msgstr ""
+
+#. module: test_steven
+#: model:ir.model.fields,help:test_steven.field_career_enrollment__source_id
+#: model:ir.model.fields,help:test_steven.field_enrollment__source_id
+#: model:ir.model.fields,help:test_steven.field_student_subject__source_id
+#: model:ir.model.fields,help:test_steven.field_subject__source_id
+msgid ""
+"This is the source of the link, e.g. Search Engine, another domain, or name "
+"of email list"
+msgstr ""
+
+#. module: test_steven
+#: model:ir.model.fields,field_description:test_steven.field_student_subject__total_hours
+#: model:ir.model.fields,field_description:test_steven.field_subject__total_hours
+msgid "Total Hours"
+msgstr "Total de horas"
+
+#. module: test_steven
+#: model:ir.model.fields,help:test_steven.field_student_subject__total_hours
+#: model:ir.model.fields,help:test_steven.field_subject__total_hours
+msgid "Total of hours of the subject."
+msgstr "Total de horas de la materia"
+
+#. module: test_steven
+#: model:ir.model.fields,field_description:test_steven.field_enrollment__sale_order_id
+msgid "Transaction"
+msgstr "Transacción"
+
+#. module: test_steven
+#: model:ir.model.fields,help:test_steven.field_career_enrollment__activity_exception_decoration
+#: model:ir.model.fields,help:test_steven.field_enrollment__activity_exception_decoration
+#: model:ir.model.fields,help:test_steven.field_student_subject__activity_exception_decoration
+#: model:ir.model.fields,help:test_steven.field_subject__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Tipo de actividad de excepción registrada"
+
+#. module: test_steven
+#: model:ir.model.fields,field_description:test_steven.field_career_enrollment__message_unread
+#: model:ir.model.fields,field_description:test_steven.field_enrollment__message_unread
+#: model:ir.model.fields,field_description:test_steven.field_student_subject__message_unread
+#: model:ir.model.fields,field_description:test_steven.field_subject__message_unread
+msgid "Unread Messages"
+msgstr "Mensajes no leídos"
+
+#. module: test_steven
+#: model:ir.model.fields,field_description:test_steven.field_career_enrollment__message_unread_counter
+#: model:ir.model.fields,field_description:test_steven.field_enrollment__message_unread_counter
+#: model:ir.model.fields,field_description:test_steven.field_student_subject__message_unread_counter
+#: model:ir.model.fields,field_description:test_steven.field_subject__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Contador de mensajes no leídos"
+
+#. module: test_steven
+#: model:ir.model.fields,field_description:test_steven.field_career_enrollment__website_message_ids
+#: model:ir.model.fields,field_description:test_steven.field_enrollment__website_message_ids
+#: model:ir.model.fields,field_description:test_steven.field_student_subject__website_message_ids
+#: model:ir.model.fields,field_description:test_steven.field_subject__website_message_ids
+msgid "Website Messages"
+msgstr "Mensajes del sitio web"
+
+#. module: test_steven
+#: model:ir.model.fields,help:test_steven.field_career_enrollment__website_message_ids
+#: model:ir.model.fields,help:test_steven.field_enrollment__website_message_ids
+#: model:ir.model.fields,help:test_steven.field_student_subject__website_message_ids
+#: model:ir.model.fields,help:test_steven.field_subject__website_message_ids
+msgid "Website communication history"
+msgstr "Historial de comunicación del sitio web"
+
+#. module: test_steven
+#: model:ir.model.fields,help:test_steven.field_product_product__course_code
+#: model:ir.model.fields,help:test_steven.field_product_template__course_code
+msgid ""
+"With this field, the teacher can filtered by course code in the search of "
+"products"
+msgstr "Con este campo, el profesor puede filtrar por código de curso en la búsqueda de "
+"productos"
+
+#. module: test_steven
+#: model:ir.model.fields,help:test_steven.field_product_product__is_course
+#: model:ir.model.fields,help:test_steven.field_product_template__is_course
+msgid "With this field, we validate that the product is for a course."
+msgstr ""
+
+#. module: test_steven
+#: model:ir.model.fields,help:test_steven.field_sale_order__is_new_enrollment
+msgid ""
+"With this field, we validate that the sale order is for a new Enrollment "
+"transaction."
+msgstr "Con este campo validamos que la orden de venta es para una matrícula en la transacción"
+
+#. module: test_steven
+#: model:ir.model.fields,help:test_steven.field_res_partner__is_student
+#: model:ir.model.fields,help:test_steven.field_res_users__is_student
+msgid "With this field, we validate that the user is a student."
+msgstr "Con este campo, validamos que el usuario es un estudiante"
+
+#. module: test_steven
+#: model_terms:ir.ui.view,arch_db:test_steven.student_subjects_view_form
+msgid "_form"
+msgstr ""
+
+#. module: test_steven
+#: model:ir.actions.act_window,name:test_steven.action_student_subjects
+msgid "action.student.subjects"
+msgstr "action.student.subjects"

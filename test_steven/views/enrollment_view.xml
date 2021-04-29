@@ -19,11 +19,11 @@
 							</h1>
 						</div>
 						<group>
-							<group string="Details">
+							<group string="Details" groups="base.group_user">
 								<field name="student_partner_id" domain="[('is_student','=',True)]"/>
 								<field name="day_trip" />
-								<field name="sale_order_id" attrs="{'invisible': [('sale_order_id','=',False)]}"/>
-								<field name="course_code" attrs="{'invisible': [('course_code','=',False)]}"/>
+								<field name="sale_order_id" attrs="{'invisible': [('sale_order_id','=',False)], 'readonly': [('sale_order_id','=',True)]}"/>
+								<field name="course_code" attrs="{'invisible': [('course_code','=',False)],'readonly': [('course_code','=',True)]}"/>
 							</group>
 							<group string="Career">
 								<field name="start_date" />
@@ -31,6 +31,19 @@
 								<field name="career_enrollment_id" />
 							</group>
 						</group>
+						<field name="student_subjects_ids" 
+							   attrs="{'invisible': [('state','=','draft')]}"
+							   nolabel="1"
+							   widget="one2many_list"
+							   options="{'no_create_edit': False}">
+							<tree>
+								<field name="name" />
+								<field name="min_score" />
+								<field name="max_score" />
+								<field name="average" />
+								<field name="is_approved" />
+							</tree>
+						</field>
 					</sheet>
 					<div class="oe_chatter">
 	                    <field name="message_follower_ids"/>
@@ -80,6 +93,6 @@
 		<!-- Sales menú -->
 		<menuitem id="menu_sales_enrollment" name="Enrollments"
 			parent="menu_sales_enrollment_categ" sequence="1"
-			action="action_enrollment_view" />
+			action="action_enrollment_view" groups="base.group_user"/>
 	</data>
 </odoo>

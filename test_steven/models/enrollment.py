@@ -2,6 +2,7 @@
 
 from odoo import models, fields, api, _
 from odoo.exceptions import UserError, RedirectWarning, ValidationError
+from datetime import datetime
 
 
 class Enrollment(models.Model):
@@ -9,8 +10,31 @@ class Enrollment(models.Model):
     _inherit = ['portal.mixin', 'mail.thread', 'mail.activity.mixin', 'utm.mixin']
     _description = 'Enrollment of the student.'
     
+    def action_button_to_student_subject(self):
+        pass
+    
     def action_matriculate_button(self):
-        self.state = 'matriculate'
+        # Realizamos varias validaciones antes de matricular al estudiante
+        for enrollment in self:
+            if not enrollment.end_date or not enrollment.start_date:
+                raise ValidationError('Ingrese una fecha de inicio o finalización de la carrera para la matricula del estudiante %s.' % enrollment.student_partner_id.name)
+            if not enrollment.career_enrollment_id:
+                raise ValidationError('Ingrese una carrera para la matricula del estudiante %s.' % enrollment.student_partner_id.name)
+            if not enrollment.day_trip:
+                raise ValidationError('Ingrese una jornada para la matricula del estudiante %s.' % enrollment.student_partner_id.name)
+            student_subj_obj = enrollment.env['student.subject']
+            student_subj_list = []
+            for subject in enrollment.career_enrollment_id.subjects_ids:
+                student_subj_dict = {
+                    'student_id': enrollment.student_partner_id.id,
+                    'name' : subject.id
+                    }
+                student_subj_list.append((0,0,student_subj_dict))
+            # subjects_create = student_subj_obj.create(student_subj_list)
+            enrollment.write({
+                'student_subjects_ids' : student_subj_list
+                })
+            enrollment.state = 'matriculate'
     
     def action_cancel(self):
         pass
@@ -53,7 +77,7 @@ class Enrollment(models.Model):
     start_date = fields.Date(
         string='Start Date',
         help='Starting day the career begins.',
-        default=fields.Date.context_today,
+        default=datetime.today(),
         states={'draft': [('readonly', False)], 'matriculate': [('readonly', True)],'cancel': [('readonly', True)]}
         )
     end_date = fields.Date(
@@ -64,22 +88,38 @@ class Enrollment(models.Model):
     course_code = fields.Char(
         string='Course Code',
         help='Course Code for the enrollment in the partner student.',
-        required=True,
         readonly=True,
         store=True,
-        states={'draft': [('readonly', False)], 'matriculate': [('readonly', True)],'cancel': [('readonly', True)]}
+        states={'draft': [('readonly', True)], 'matriculate': [('readonly', True)],'cancel': [('readonly', True)]}
         )
     career_enrollment_id = fields.Many2one(
         'career.enrollment',
         string='Career',
         help='Career that the student will follow.',
-        required=True,
         states={'draft': [('readonly', False)], 'matriculate': [('readonly', True)],'cancel': [('readonly', True)]}
         )
     sale_order_id = fields.Many2one(
         'sale.order',
         string='Transaction',
         help='Reference transaction where enrollment was created.',
-        required=True,
-        states={'draft': [('readonly', False)], 'matriculate': [('readonly', True)],'cancel': [('readonly', True)]}
+        states={'draft': [('readonly', True)], 'matriculate': [('readonly', True)],'cancel': [('readonly', True)]}
         )
+    student_subjects_ids = fields.One2many(
+        'student.subject',
+        'enrollment_student_id',
+        string='Subjects',
+        help='Subjects of the student'
+        )
+    
+class EnrollmentReport(models.AbstractModel):
+    _name='enrollment.report'
+    
+    @api.model
+    def _get_report_values(self, docids, data=None):
+        report_obj = self.env['ir.actions.report']
+        report = report_obj._get_report_from_name('test_steven.report_enrollment')
+        return {
+            'doc_ids': docids,
+            'doc_model': self.env['enrollment'],
+            'docs': self.env['enrollment'].browse(docids)
+            }

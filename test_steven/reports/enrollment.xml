@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <report
+            string="Informe Matricula"
+            id="enrollment_report"
+            model="enrollment"
+            report_type="qweb-pdf"
+            name="test_steven.report_enrollment"
+            file="test_steven.report_enrollment"
+            attachment_use="True"
+        />
+    </data>
+</odoo>

@@ -8,7 +8,7 @@ from odoo.exceptions import UserError, RedirectWarning, ValidationError
 class CareerEnrollment(models.Model):
     _name = 'career.enrollment'
     _inherit = ['portal.mixin', 'mail.thread', 'mail.activity.mixin', 'utm.mixin']
-    _description = 'Career that the student will follow.'
+    _description = 'CareerEnrollment'
     
     # Columns
     name = fields.Char(
