@@ -110,3 +110,16 @@ class Enrollment(models.Model):
         string='Subjects',
         help='Subjects of the student'
         )
+    
+class EnrollmentReport(models.AbstractModel):
+    _name='enrollment.report'
+    
+    @api.model
+    def _get_report_values(self, docids, data=None):
+        report_obj = self.env['ir.actions.report']
+        report = report_obj._get_report_from_name('test_steven.report_enrollment')
+        return {
+            'doc_ids': docids,
+            'doc_model': self.env['enrollment'],
+            'docs': self.env['enrollment'].browse(docids)
+            }
