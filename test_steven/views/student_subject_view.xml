@@ -8,7 +8,7 @@
 				<form string="_form">
 					<header>
 			            <!-- <button name="" string="" class="oe_highlight" states="" type=""/> -->
-			            <field name="is_approved" widget="statusbar" statusbar_visible="approved,disapproved" statusbar_colors="{'KEY_IS_STATE':'VALUE_IS_COLOR'}"/>
+			            <field name="is_approved" widget="statusbar" statusbar_visible="disapproved,approved" statusbar_colors="{'KEY_IS_STATE':'VALUE_IS_COLOR'}"/>
 			        </header>
 					<sheet>
 						<div class="oe_title">
@@ -18,11 +18,11 @@
 							</h1>
 						</div>
 						<group name="detail_group" string="Details">
-							<field name="min_score" />
-							<field name="max_score" />
-							<field name="average" />
+							<field name="min_score" readonly="1" force_save="1"/>
+							<field name="max_score" readonly="1" force_save="1"/>
+							<field name="average" readonly="1" force_save="1"/>
 							<field name="student_id" />
-							<field name="total_hours" />
+							<field name="total_hours" readonly="1" force_save="1"/>
 						</group>
 						<group name="scores_group" string="Scores">
 							<field name="subject_scores_ids" widget="one2many_list" nolabel="1">

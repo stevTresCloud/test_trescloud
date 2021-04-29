@@ -12,7 +12,8 @@ class Subject(models.Model):
     @api.onchange('subject_syllabus_ids')
     def _onchange_subject_syllabus_ids(self):
         # Si hay un cambio en las líneas del temario, lanza el método _compute_total_subject_hours para recomputar
-        self._compute_total_subject_hours()
+        for subject in self:
+            subject._compute_total_subject_hours()
         
     @api.depends('total_hours')
     def _compute_total_subject_hours(self):

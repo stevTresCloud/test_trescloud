@@ -12,11 +12,6 @@
 			            <field name="state" widget="statusbar" statusbar_visible="draft,matriculate,cancel" statusbar_colors="{'KEY_IS_STATE':'VALUE_IS_COLOR'}"/>
 			        </header>
 					<sheet>
-						<div class="oe_button_box" name="button_box" attrs="{'invisible': [('state','=','draft')]}">
-	                        <button name="action_button_to_student_subject" type="object" class="oe_stat_button" icon="fa-graduation-cap icon">
-	                            <field string="Student" name="student_partner_id" widget="statinfo"/>
-	                        </button>
-	                    </div>
 						<div class="oe_title">
 							<label for="name" />
 							<h1>
@@ -36,6 +31,19 @@
 								<field name="career_enrollment_id" />
 							</group>
 						</group>
+						<field name="student_subjects_ids" 
+							   attrs="{'invisible': [('state','=','draft')]}"
+							   nolabel="1"
+							   widget="one2many_list"
+							   options="{'no_create_edit': False}">
+							<tree>
+								<field name="name" />
+								<field name="min_score" />
+								<field name="max_score" />
+								<field name="average" />
+								<field name="is_approved" />
+							</tree>
+						</field>
 					</sheet>
 					<div class="oe_chatter">
 	                    <field name="message_follower_ids"/>

@@ -14,7 +14,27 @@ class Enrollment(models.Model):
         pass
     
     def action_matriculate_button(self):
-        self.state = 'matriculate'
+        # Realizamos varias validaciones antes de matricular al estudiante
+        for enrollment in self:
+            if not enrollment.end_date or not enrollment.start_date:
+                raise ValidationError('Ingrese una fecha de inicio o finalización de la carrera para la matricula del estudiante %s.' % enrollment.student_partner_id.name)
+            if not enrollment.career_enrollment_id:
+                raise ValidationError('Ingrese una carrera para la matricula del estudiante %s.' % enrollment.student_partner_id.name)
+            if not enrollment.day_trip:
+                raise ValidationError('Ingrese una jornada para la matricula del estudiante %s.' % enrollment.student_partner_id.name)
+            student_subj_obj = enrollment.env['student.subject']
+            student_subj_list = []
+            for subject in enrollment.career_enrollment_id.subjects_ids:
+                student_subj_dict = {
+                    'student_id': enrollment.student_partner_id.id,
+                    'name' : subject.id
+                    }
+                student_subj_list.append((0,0,student_subj_dict))
+            # subjects_create = student_subj_obj.create(student_subj_list)
+            enrollment.write({
+                'student_subjects_ids' : student_subj_list
+                })
+            enrollment.state = 'matriculate'
     
     def action_cancel(self):
         pass
@@ -68,10 +88,9 @@ class Enrollment(models.Model):
     course_code = fields.Char(
         string='Course Code',
         help='Course Code for the enrollment in the partner student.',
-        required=True,
         readonly=True,
         store=True,
-        states={'draft': [('readonly', False)], 'matriculate': [('readonly', True)],'cancel': [('readonly', True)]}
+        states={'draft': [('readonly', True)], 'matriculate': [('readonly', True)],'cancel': [('readonly', True)]}
         )
     career_enrollment_id = fields.Many2one(
         'career.enrollment',
@@ -83,6 +102,11 @@ class Enrollment(models.Model):
         'sale.order',
         string='Transaction',
         help='Reference transaction where enrollment was created.',
-        required=True,
-        states={'draft': [('readonly', False)], 'matriculate': [('readonly', True)],'cancel': [('readonly', True)]}
+        states={'draft': [('readonly', True)], 'matriculate': [('readonly', True)],'cancel': [('readonly', True)]}
+        )
+    student_subjects_ids = fields.One2many(
+        'student.subject',
+        'enrollment_student_id',
+        string='Subjects',
+        help='Subjects of the student'
         )
