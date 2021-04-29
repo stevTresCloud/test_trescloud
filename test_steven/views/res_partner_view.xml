@@ -8,10 +8,10 @@
 			<field name="arch" type="xml">
 				<xpath expr="//field[@name='category_id']" position="after">
 					<field name="is_student" />
-					<field name="enrollment_id" attrs="{'invisible': [('is_student','=',False)],'required': [('is_student','=',True)]}"/>
+					<field name="enrollment_id" attrs="{'invisible': [('enrollment_id','=',False)]}"/>
 				</xpath>
 				<xpath expr="//page[@name='internal_notes']" position="after">
-					<page name="subjects_page" string="Subjects" attrs="{'invisible': [('is_student','=',False)]}">
+					<page name="subjects_page" string="Subjects" attrs="{'invisible': [('enrollment_id','=',False)]}">
                     	<field name="student_subject_id" widget="one2many_list" nolabel="1" options="{'no_create_edit': True}">
                     		<tree>
                     			<field name="name" />

@@ -41,5 +41,12 @@
 				</form>
 			</field>
 		</record>
+		
+		<record id="action_student_subjects" model="ir.actions.act_window">
+            <field name="name">action.student.subjects</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">student.subject</field>
+            <field name="view_mode">form</field>
+        </record>
 	</data>
 </odoo>

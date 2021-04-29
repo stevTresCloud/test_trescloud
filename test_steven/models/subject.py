@@ -11,14 +11,25 @@ class Subject(models.Model):
     
     @api.onchange('subject_syllabus_ids')
     def _onchange_subject_syllabus_ids(self):
+        # Si hay un cambio en las líneas del temario, lanza el método _compute_total_subject_hours para recomputar
         self._compute_total_subject_hours()
         
     @api.depends('total_hours')
     def _compute_total_subject_hours(self):
-        total = 0
-        if self.subject_syllabus_ids:
-            total = sum(syllabus.syllabus_hours for syllabus in self.subject_syllabus_ids)
-        self.total_hours = total
+        # Con este método computamos el campo total_hours según las líneas subject_syllabus_ids
+        # :return: Cero si no hay líneas subject_syllabus_ids, y devuelve la suma de las horas desde las líneas subject_syllabus_ids
+        for subject in self:
+            total = 0
+            if subject.subject_syllabus_ids:
+                total = sum(syllabus.syllabus_hours for syllabus in subject.subject_syllabus_ids)
+            subject.total_hours = total
+    
+    @api.model    
+    def create(self, vals):
+        # Realizamos un super para evitar que se guarde el total de horas con horas negativas o cero
+        if int(vals.get('total_hours', False)) <= 0 or not vals.get('subject_syllabus_ids'):
+            raise ValidationError('La materia debe tener más de 0 horas totales, para guardar.')
+        return super(Subject, self).create(vals)
     
     # Columns
     name = fields.Char(
@@ -39,9 +50,7 @@ class Subject(models.Model):
     total_hours = fields.Integer(
         string=u'Total Hours',
         compute='_compute_total_subject_hours',
-        help=u'Total of hours of the subject.',
-        readonly=True,
-        store=True
+        help=u'Total of hours of the subject.'
         )
     subject_syllabus_ids = fields.One2many(
         'subject.syllabus',

@@ -2,12 +2,16 @@
 
 from odoo import models, fields, api, _
 from odoo.exceptions import UserError, RedirectWarning, ValidationError
+from datetime import datetime
 
 
 class Enrollment(models.Model):
     _name = 'enrollment'
     _inherit = ['portal.mixin', 'mail.thread', 'mail.activity.mixin', 'utm.mixin']
     _description = 'Enrollment of the student.'
+    
+    def action_button_to_student_subject(self):
+        pass
     
     def action_matriculate_button(self):
         self.state = 'matriculate'
@@ -53,7 +57,7 @@ class Enrollment(models.Model):
     start_date = fields.Date(
         string='Start Date',
         help='Starting day the career begins.',
-        default=fields.Date.context_today,
+        default=datetime.today(),
         states={'draft': [('readonly', False)], 'matriculate': [('readonly', True)],'cancel': [('readonly', True)]}
         )
     end_date = fields.Date(
@@ -73,7 +77,6 @@ class Enrollment(models.Model):
         'career.enrollment',
         string='Career',
         help='Career that the student will follow.',
-        required=True,
         states={'draft': [('readonly', False)], 'matriculate': [('readonly', True)],'cancel': [('readonly', True)]}
         )
     sale_order_id = fields.Many2one(

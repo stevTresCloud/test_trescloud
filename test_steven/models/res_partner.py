@@ -11,11 +11,13 @@ class ResPartner(models.Model):
     is_student = fields.Boolean(
         string='Is Student',
         help='With this field, we validate that the user is a student.',
-    )
+        )
     enrollment_id = fields.Many2one(
         'enrollment',
         string='Enrollment',
-        help='Enrollment of the student, if the user is a student.'
+        help='Enrollment of the student, if the user is a student.',
+        readonly=True,
+        store=True
         )
     student_subject_id = fields.One2many(
         'student.subject',
