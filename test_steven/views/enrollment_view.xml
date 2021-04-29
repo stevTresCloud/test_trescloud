@@ -19,7 +19,7 @@
 							</h1>
 						</div>
 						<group>
-							<group string="Details">
+							<group string="Details" groups="base.group_user">
 								<field name="student_partner_id" domain="[('is_student','=',True)]"/>
 								<field name="day_trip" />
 								<field name="sale_order_id" attrs="{'invisible': [('sale_order_id','=',False)], 'readonly': [('sale_order_id','=',True)]}"/>
@@ -93,6 +93,6 @@
 		<!-- Sales menú -->
 		<menuitem id="menu_sales_enrollment" name="Enrollments"
 			parent="menu_sales_enrollment_categ" sequence="1"
-			action="action_enrollment_view" />
+			action="action_enrollment_view" groups="base.group_user"/>
 	</data>
 </odoo>
