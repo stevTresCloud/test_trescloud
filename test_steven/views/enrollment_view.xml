@@ -31,7 +31,7 @@
 								<field name="career_enrollment_id" />
 							</group>
 						</group>
-						<field name="student_subjects_ids" 
+						<field name="student_subjects_ids"
 							   attrs="{'invisible': [('state','=','draft')]}"
 							   nolabel="1"
 							   widget="one2many_list"
